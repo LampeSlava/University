@@ -1,5 +1,3 @@
-package com.company;
-
 public class StudyGroup {
     private String groupName;
     private int course;
