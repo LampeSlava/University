@@ -1,5 +1,3 @@
-package com.company;
-
 public class Teacher extends Person {
 
     private float hours; //hours per week
