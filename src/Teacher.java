@@ -4,8 +4,8 @@ public class Teacher extends Person {
     private double tariff; //payment per hour
 
     //constructors
-    public Teacher(String name, String surname, int yearBirth, Address address, String status, float hours, double tariff) {
-        super(name, surname, yearBirth, address, status);
+    public Teacher(int persId, String name, String surname, int yearBirth, Address address, String pStatus, float hours, double tariff) {
+        super(persId, name, surname, yearBirth, address, pStatus);
         this.hours = hours;
         this.tariff = tariff;
     }
@@ -30,7 +30,7 @@ public class Teacher extends Person {
     //Methods
     @Override
     public String toString() {
-        return this.getName() + ", " + this.getSurname() + ", " + this.getYear() + ", " + this.getStatus() + ", " + this.getTariff() + ", " + this.getHours() + ", teacher's address: " + this.getAddress();
+        return this.getPersId() + ", " + this.getName() + ", " + this.getSurname() + ", " + this.getYear() + ", " + this.getPstatus() + ", " + this.getTariff() + ", " + this.getHours() + ", teacher's address: " + this.getAddress();
     }
 
 }

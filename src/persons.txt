@@ -1,0 +1,6 @@
+0	John	Doe	1970	Student
+1	Donald	Trump	1940	Student
+3	Henry	Ford	1900	Student
+6	Cat	Red	2000	Teacher
+7	Young	Youngest	2010	Student
+8	Old	Oldest	1890	Teacher

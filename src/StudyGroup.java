@@ -19,6 +19,7 @@ public class StudyGroup {
 
     //setters and getters
     public void setStudent(Person student) {
+
         this.student = student;
     }
 

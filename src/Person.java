@@ -1,29 +1,34 @@
-public class Person {
+import java.util.Comparator;
+
+public class Person { //implements Comparable<Person>{
+    private int persId;
     private String name;
     private String surname;
     private int yearBirth;
     private Address address;
-    private String status; //student, teacher, etc.
+    private String pStatus; //student, teacher, etc.
+    private boolean opFlag; //true, if something need to be done with current person
 
     //constructors
-    public Person(String name, String surname, int yearBirth, Address address, String status) {
+    public Person(int persId, String name, String surname, int yearBirth, Address address, String pStatus) {
+        this.persId = persId;
         this.name = name;
         this.surname = surname;
         this.yearBirth = yearBirth;
         this.address = address;
-		/*if ((status != "Teacher") || (status != "Student")) {
-			this.status = "Student";
-		} else {*/
-        this.status = status;
-        //}
+        this.pStatus = pStatus;
     }
 
-    public Person(String name, String surname, int yearBirth, Address address) {
+    public Person(int persId, String name, String surname, int yearBirth, Address address) {
+        this.persId = persId;
         this.name = name;
         this.surname = surname;
         this.yearBirth = yearBirth;
         this.address = address;
-        this.status = "Student"; //create default
+        this.pStatus = "Student"; //create default
+    }
+
+    public Person() {
     }
 
     //setters and getters
@@ -50,12 +55,12 @@ public class Person {
         return this.yearBirth;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPstatus(String pstatus) {
+        this.pStatus = pStatus;
     }
 
-    public String getStatus() {
-        return this.status;
+    public String getPstatus() {
+        return pStatus;
     }
 
     public void setAddress(Address address) {
@@ -66,9 +71,24 @@ public class Person {
         return this.address;
     }
 
-    @Override
-    public String toString() {
-        return this.getName() + ", " + this.getSurname() + ", " + this.getYear() + ", " + this.getStatus() + ", address: " + this.address;
+    public int getPersId() {
+        return persId;
     }
 
+    public void setPersId(int persId) {
+        this.persId = persId;
+    }
+
+    @Override
+    public String toString() {
+        return this.persId + ", " + this.getName() + ", " + this.getSurname() + ", " + this.getYear() + ", " + this.getPstatus() + ", address: " + this.address;
+    }
+
+//    @Override
+//    public int compareTo(Person o) {
+//        //return 0;
+//        //if (sortOrder == 'd') {
+//            return this.getPersId() - o.getPersId();
+//        //}
+//    }
 }
